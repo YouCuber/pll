@@ -1,0 +1,363 @@
+<html>
+<head>
+<title>PLL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf_8">
+<style>
+td.kihon {font-size: 28px; background-color:green}
+td.kotsu {font-size: 28px; background-color:lightgreen}
+td.alg {font-size: 28px; background-color:yellow}
+td.new {font-size: 28px; background-color:lightblue}
+td.bad {font-size: 28px; background-color:pink}
+td.small {font-size: 16px; }
+th {font-size: 28px; }
+td {font-size: 28px; }
+kotsu {bg-color: green; }
+</style>
+
+<script src="jquery-3.4.1.min.js"></script>
+<script src="jquery.cookie.js"></script>
+<script>
+<!--
+var backgroundColor = {}
+
+jQuery( function() {
+	a=0;
+	var ids = [ "Ua","Ub",
+				"T","Y",
+				"H","Z",
+				"ja","Jb",
+				"Aa","Ab","V",
+				"E","F",
+				"Ra","Rb",
+				"Ga","Gb",
+				"Gc","Gd",
+				"Na","Nb",
+
+	ids.forEach( function (id) {
+		a=a+1;
+	    backgroundColorchange(id);
+	});
+//	alert(a);
+
+
+//    jQuery( '#i1' ).click( function () {
+//	alert("click1!");
+//        backgroundColorchange( 'i1' );
+//    } );
+//    jQuery( '#i2' ).click( function () {
+//        backgroundColorchange( 'i2' );
+//    } );
+//    jQuery( '#s1' ).click( function () {
+	$('.event').on('click', function(){
+//		alert($(this).data('hoge'));
+		id = $(this).data('hoge');
+        backgroundColorchange( id );
+    } );
+
+
+    function backgroundColorchange( id ){
+//	alert("clicked!");
+//		alert(id);
+       if( backgroundColor[id] == undefined ) {
+//	alert("undef");
+            backgroundColor[id] = jQuery.cookie( id );
+            if( backgroundColor[id] == undefined ){
+                backgroundColor[id] = 'white';
+            }
+        } else if (backgroundColor[id] == 'white') {
+               backgroundColor[id] = 'yellow';
+        } else if (backgroundColor[id] == 'yellow') {
+               backgroundColor[id] = 'lightgreen';
+        } else if (backgroundColor[id] == 'lightgreen') {
+               backgroundColor[id] = 'red';
+        } else if (backgroundColor[id] == 'red') {
+               backgroundColor[id] = 'white';
+        }
+//	alert(backgroundColor[id]);
+
+        jQuery.cookie( id, backgroundColor[id] , { expires: 2000 } );
+//        jQuery( '#'+id ).css( { 'backgroundColor': backgroundColor[id] } );
+        jQuery( '#_'+id ).css( { 'backgroundColor': backgroundColor[id] } );
+    }
+} );
+// -->
+</script>
+</head>
+<body>
+<br>
+<br>
+<br>
+<div align="center">
+
+<Font size = "+5"><b>ＰＬＬ</b></font>
+<br>
+キューブをクリックすると、行の色が変えられます！<br>
+<table border="1">
+<tr><td class="small">黄色</td><td class="small">覚え中</td></tr>
+<tr><td class="small">緑</td><td class="small">覚え終わった</td></tr>
+<tr><td class="small">赤</td><td class="small">注目</td></tr>
+</table>
+などとしてみましょう！
+<table style="border-collapse: collapse;" border="1">
+<tbody>
+<tr>
+<th width="10">呼称</th>
+<th width="100">画像</th>
+<th width="300">分類</th>
+<th width="300">備考</th>
+<th width="120">解説動画</th>
+<th width="120">アニメ</th>
+</tr>
+
+<tr id="_P" style="display: none;">
+<td>0</td>
+<td class="event" data-hoge="P"><img src="images/0.png" width="100" height="100"/></td>
+<td width="300"></td>
+<td width="300"></td>
+<td align="center"><a href="https://youtu.be/UAe5lt_mi0o"target="_youtube"><img width="50%" src="images/play_button.png"></a></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=y_U-_L-_U_L" target="_anime">アニメ</a>
+</td>
+</tr>
+
+<tr id="_Ua" style="display: unnone;">
+<td>Ua</td>
+<td class="event" data-hoge="Ua"><img src="images/Ua.png" width="100" height="100"/></td>
+<td width="300">三連バーひとつ。ヘッドライトあり</td>
+<td width="300">バーは奥に、手前のエッジが右に移動</td>
+<td align="center"><a href="https://youtu.be/rUsDtL9BCIo"target="_youtube"><img width="50%" src="images/play_button.png"></a></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=PLL&alg=R_U-_R_U_R_U_R_U-_R-U-R2" target="_anime">アニメ</a>
+</td>
+</tr>
+
+<tr id="_Ub" style="display: unnone;">
+<td>Ub</td>
+<td class="event" data-hoge="Ub"><img src="images/Ub.png" width="100" height="100"/></td>
+<td width="300">三連バーひとつ。ヘッドライトあり</td>
+<td width="300">バーは奥に、手前のエッジが左に移動</td>
+<td align="center"><a href="https://youtu.be/gwH4cbt65ug"target="_youtube"><img width="50%" src="images/play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_T" style="display: unnone;">
+<td>T</td>
+<td class="event" data-hoge="T"><img src="images/T.png" width="100" height="100"/></td>
+<td width="300">二連が手前と裏</td>
+<td width="300">ヘッドライトは左に向けて持つ</td>
+<td align="center"><a href="https://youtu.be/8o978z6fkW8"target="_youtube"><img width="50%" src="images/play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Y" style="display: unnone;">
+<td>Y</td>
+<td class="event" data-hoge="Y"><img src="images/Y.png" width="100" height="100"/></td>
+<td width="300">二連が手前と右</td>
+<td width="300">二連同士ははなれている</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_H" style="display: unnone;">
+<td>H</td>
+<td class="event" data-hoge="H"><img src="images/H.png" width="100" height="100"/></td>
+<td width="300">ヘッドライト４つ</td>
+<td width="300">対面エッジ交換</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Z" style="display: unnone;">
+<td>Z</td>
+<td class="event" data-hoge="Z"><img src="images/Z.png" width="100" height="100"/></td>
+<td width="300">ヘッドライト４つ</td>
+<td width="300">隣接エッジ交換</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Ja" style="display: unnone;">
+<td>Ja</td>
+<td class="event" data-hoge="Ja"><img src="images/Ja.png" width="100" height="100"/></td>
+<td width="300">三連バーと二連がある</td>
+<td width="300">三連バーを左に持つ</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Jb" style="display: unnone;">
+<td>Jb</td>
+<td class="event" data-hoge="Jb"><img src="images/Jb.png" width="100" height="100"/></td>
+<td width="300">三連バーと二連がある</td>
+<td width="300">三連バーを手前か、左に持つ</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Aa" style="display: unnone;">
+<td>Aa</td>
+<td class="event" data-hoge="Aa"><img src="images/Aa.png" width="100" height="100"/></td>
+<td width="300">二連が二つつながっている</td>
+<td width="300">二連二つを左上にするとヘッドライトが右</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Ab" style="display: unnone;">
+<td>Ab</td>
+<td class="event" data-hoge="Ab"><img src="images/Ab.png" width="100" height="100"/></td>
+<td width="300">二連が二つつながっている</td>
+<td width="300">二連二つを左上にするとヘッドライトが下</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_V" style="display: unnone;">
+<td>V</td>
+<td class="event" data-hoge="V"><img src="images/V.png" width="100" height="100"/></td>
+<td width="300">二連が二つつながっている</td>
+<td width="300">ヘッドライトがない</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_E" style="display: unnone;">
+<td>E</td>
+<td class="event" data-hoge="E"><img src="images/E.png" width="100" height="100"/></td>
+<td width="300">4側面ともバラバラ</td>
+<td width="300">赤丸の色同士をあわせて持つ</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_F" style="display: unnone;">
+<td>F</td>
+<td class="event" data-hoge="F"><img src="images/F.png" width="100" height="100"/></td>
+<td width="300">三連バーがあり、残りはバラバラ</td>
+<td width="300">三連バーを左に持つ</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Ra" style="display: unnone;">
+<td>Ra</td>
+<td class="event" data-hoge="Ra"><img src="images/Ra.png" width="100" height="100"/></td>
+<td width="300">二連一つ<br>ヘッドライト一つ</td>
+<td width="300">二連が右のヘッドライトにくっついている</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Rb" style="display: unnone;">
+<td>Rb</td>
+<td class="event" data-hoge="Rb"><img src="images/Rb.png" width="100" height="100"/></td>
+<td width="300">二連一つ<br>ヘッドライト一つ</td>
+<td width="300">二連が左のヘッドライトにくっついている</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Ga" style="display: unnone;">
+<td>Ga</td>
+<td class="event" data-hoge="Ga"><img src="images/Ga.png" width="100" height="100"/></td>
+<td width="300">二連一つ<br>ヘッドライト一つ</td>
+<td width="300">ヘッドライトを左に向けると二連が手前面右</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Gb" style="display: unnone;">
+<td>Gb</td>
+<td class="event" data-hoge="Gb"><img src="images/Gb.png" width="100" height="100"/></td>
+<td width="300">二連一つ<br>ヘッドライト一つ</td>
+<td width="300">ヘッドライトを左に向けると二連が右面奥</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Gc" style="display: unnone;">
+<td>Gc</td>
+<td class="event" data-hoge="Gc"><img src="images/Gc.png" width="100" height="100"/></td>
+<td width="300">二連一つ<br>ヘッドライト一つ</td>
+<td width="300">ヘッドライトを左に向けると二連が裏面右</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Gd" style="display: unnone;">
+<td>Gd</td>
+<td class="event" data-hoge="Gd"><img src="images/Gd.png" width="100" height="100"/></td>
+<td width="300">二連一つ<br>ヘッドライト一つ</td>
+<td width="300">ヘッドライトを左に向けると二連が右面手前</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Na" style="display: unnone;">
+<td>Na</td>
+<td class="event" data-hoge="Na"><img src="images/Na.png" width="100" height="100"/></td>
+<td width="300">二連が四つ</td>
+<td width="300">手前の一つが左</td>
+<td align="center"><img width="50%" src="images/non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+
+<tr id="_Nb" style="display: unnone;">
+<td>Nb</td>
+<td class="event" data-hoge="Nb"><img src="images/Nb.png" width="100" height="100"/></td>
+<td width="300">二連が四つ</td>
+<td width="300">手前の一つが右</td>
+<td align="center"><a href="https://youtu.be/f3dfyAlbxbA"target="_youtube"><img width="50%" src="images/play_button.png"></a></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=OLL&alg=R_U2_R-_U-R_U_R-U-_R_U-R-" target="_anime">前後</a>
+</td>
+</tr>
+
+
+
+</table>
+<br>
+<br>
+<br>
+<br>
+</div>
+</body>
+</html>
