@@ -91,6 +91,82 @@ jQuery( function() {
 <div align="center">
 
 <br>
+
+<script type="text/javascript">
+   var imglist = new Array(
+      "15687732336Rw-247x247.jpg",
+      "15863085719Zp-510x510.jpg",
+      "2102010800156-510x340.jpg",
+      "2102011800131-15-510x510.jpg",
+      "2102011800858-510x340.jpg",
+      "2102021800930-510x340.jpg",
+      "2102030101431-1-510x510.jpg",
+      "2102040700235-15-510x510.jpg",
+      "2102040900437-16-510x510.jpg",
+      "2103010101830.1-510x340.jpg",
+      "2103010102134-510x340.jpg",
+      "2103010102233-510x340.jpg",
+      "2105010300138-510x340.jpg",
+      "2105010400135-16-510x340.jpg",
+      "2108010100630-510x510.jpg",
+      "gan356i_stickerless-510x510.jpg",
+      "main-1-510x510.jpg",
+      "main3-510x510.jpg",
+      "2103010101533-510x340.jpg",
+ );
+
+   var itemlist = new Array(
+      "QiYi Thunderclap 3x3x3 V3 M ステッカーレス",
+      "QiYi Duomo Cube ステッカーレス",
+      "QiYi QiCheng Jelly",
+      "QiYi Pyramorphix ステッカーレス",
+      "QiYi Mastermorphix Jelly",
+      "QiYi Six Spot Cube ステッカーレス",
+      "QiYi Valk3 M ステッカーレス",
+      "QiYi XMD Bell ステッカーレス",
+      "QiYi XMD Galaxy V2L M Sculpture ステッカーレス",
+      "GAN356 X v2 ステッカーレス",
+      "GAN354 M v2 ステッカーレス",
+      "GAN356 M ステッカーレス",
+      "YuXin Little Magic 4x4x4 M ステッカーレス",
+      "Yuxin Little Magic 5x5x5 M ステッカーレス",
+      "DaYan TengYun 3x3x3 V2 M ステッカーレス",
+      "GAN356 i V2 ステッカーレス",
+      "GAN330 キーチェーン ステッカーレス",
+      "QiYi XMD Volt V2 M 半磁版 Semi Magnetic(/) ステッカーレス（ブラックパネル）",
+      "GAN356 XS ステッカーレス",
+ );
+   var itemlink = new Array(
+      "https://store.smartship.co.jp/product/qiyi-thunderclap-3x3x3-v3-m-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/qiyi-duomo-cube-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/qiyi-qicheng-jelly/?ref=72",
+      "https://store.smartship.co.jp/product/qiyi-pyramorphix-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/qiyi-mastermorphix-jelly/?ref=72",
+      "https://store.smartship.co.jp/product/qiyi-six-spot-cube-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/qiyi-valk3-m-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/qiyi-xmd-bell-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/qiyi-xmd-galaxy-v2l-m-sculpture-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/gan356-x-v2-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/gan354-m-v2-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/gan356-m-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/yuxin-little-magic-4x4x4-m-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/yuxin-little-magic-5x5x5-m-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/dayan-tengyun-3x3x3-v2-m-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/gan356-i-v2-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/gan330-keychain-stickerless/?ref=72",
+      "https://store.smartship.co.jp/product/qiyi-xmd-volt-v2-m-semi-magnetic-stickerless-black-panel/?ref=72",
+      "https://store.smartship.co.jp/product/gan356-xs-stickerless/?ref=72",
+ );
+
+   var selectnum = Math.floor(Math.random() * imglist.length);
+   var output0 = "<a href=\"https://store.smartship.co.jp/?ref=72\"><img src=images/items/LOGO_store_fixed_20190527.png width=200 border=1></a><br>";
+   var output1 = "<a href=\""+ itemlink[selectnum] + "\"><img src=images/items/" + imglist[selectnum] + " width=200 border=1></a><br>";
+   var output2 = "<b>"+itemlist[selectnum]+"</b>";
+   document.write(output0);
+   document.write(output1);
+   document.write(output2);
+</script>
+<p>
 <Font size = "+5"><b>ＰＬＬ</b></font>
 
 <br>
